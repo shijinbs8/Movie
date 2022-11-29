@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-{% block body %}
 {% load static %}
+{% block body %}
+
 	<head>
 		<meta charset="utf-8">
 		<title>Add Page</title>
@@ -13,12 +14,12 @@
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	</head>
 
-	<body>
+	<body >
 
 		<div class="wrapper">
 			<div class="inner">
 
-				<form method="post" enctype="multipart/form-data">
+				<form method="post" enctype="multipart/form-data" >
 			    {% csrf_token %}
 
 					<h3>ADD DETAILS HERE</h3>
@@ -40,24 +41,20 @@
 						<label  class="label-input">Image</label>
 						<input type="file" class="form-control" name="img">
 					</div>
+					<input type="submit" action="{'% url 'apps:index' %}"/>
 
-					<input type="submit">
-<!--					<div class="form-wrapper">-->
-<!--					    {% for msg in messages %}-->
-<!--				        <label class="label-input">{{msg}}</label>-->
-<!--						{% endfor %}-->
-<!--					</div>-->
+
 				</form>
 
 
 				<div class="image-holder">
-					<img src="{% static 'images/mh.jpg' %}" alt="" width="1000">
+					<img src="{% static 'images/inmakes.jpeg' %}" alt="" width="650">
 				</div>
 			</div>
 		</div>
 
 		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
-	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+	</body>
 {% endblock %}
 

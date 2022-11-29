@@ -18,6 +18,7 @@ def adding(request):
 
         movies=Movies(name=name,disc=disc,year=year,img=img)
         movies.save()
+        return redirect('/')
 
     return render(request,'adding.html')
 def update(request,id):

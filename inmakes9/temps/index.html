@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         {% for i in movie_list %}
-        <div class="col-md-3">
+        <div class="col-sm-12 col-lg-3 mt-4 ">
             <div class="card" >
   <img class="card-img-top" src="{{i.img.url}}" alt="" height="300cs">
   <div class="card-body">
@@ -14,8 +14,12 @@
   </div>
 </div>
         </div>
+
         {% endfor %}
+
     </div>
+    <br>
 </div>
+
 
 {% endblock %}
